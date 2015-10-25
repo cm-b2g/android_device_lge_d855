@@ -22,7 +22,9 @@ TARGET_OTA_ASSERT_DEVICE := g3,d855
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := \
+    device/lge/d855/bluetooth \
+    hardware/libhardware_moz/include/hardware_moz/bluetooth/bluedroid
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
@@ -56,3 +58,9 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
 -include vendor/lge/d855/BoardConfigVendor.mk
+
+# for Gecko to support virtual storage
+GECKO_BOARD_STORAGE_TYPE := emulated
+
+# inherit from b2g
+-include vendor/cm/BoardConfig.mk

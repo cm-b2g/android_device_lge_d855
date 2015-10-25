@@ -1,5 +1,4 @@
-#
-# Copyright 2014 The CyanogenMod Project
+# Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,20 +11,5 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from d855 device
-$(call inherit-product, device/lge/d855/device.mk)
-
-GAIA_DEV_PIXELS_PER_PX := 2.25
-BOOTANIMATION_ASSET_SIZE := 1080p
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := d855
-PRODUCT_NAME := full_d855
-PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG G3 (D855)
-PRODUCT_MANUFACTURER := LGE
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_d855.mk
