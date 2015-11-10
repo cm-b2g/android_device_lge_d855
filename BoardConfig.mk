@@ -35,6 +35,8 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2164260864
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12297699328
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_CACHEIMAGE_PARTITION_SIZE := 637534208
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
@@ -59,8 +61,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # inherit from the proprietary version
 -include vendor/lge/d855/BoardConfigVendor.mk
 
-# for Gecko to support virtual storage
-GECKO_BOARD_STORAGE_TYPE := emulated
-
 # inherit from b2g
--include vendor/cm/BoardConfig.mk
+include vendor/cm/BoardConfig.mk
