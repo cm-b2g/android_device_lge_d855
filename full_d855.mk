@@ -26,6 +26,12 @@ $(call inherit-product-if-exists, vendor/cm/config/common_full.mk)
 GAIA_DEV_PIXELS_PER_PX := 2.25
 BOOTANIMATION_ASSET_SIZE := 1080p
 
+TARGET_DEVICE_BLOBS_LIST := true
+TARGET_DEVICE_BLOBS_SRC_DIR := vendor/lge/d855/proprietary
+TARGET_DEVICE_BLOBS := \
+    device/lge/d855/proprietary-files.txt \
+    device/lge/g3-common/proprietary-files.txt
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := d855
 PRODUCT_NAME := full_d855
